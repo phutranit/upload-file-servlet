@@ -31,10 +31,10 @@ public class UploadController extends HttpServlet {
 		
 		String status = request.getParameter("status");
 		final Part part = request.getPart("image");
-		// l?y t�n file
+		// lấy tên file
 		String filename = getFileName(part);
 		
-		// du?ng d?n luu file
+		// đường dẫn luu file
 		final String path = request.getServletContext().getRealPath("/files");
 		System.out.println(path);
 		File dirPath = new File(path);
